@@ -1,0 +1,44 @@
+<! DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <head>
+        <!--Windows info-->
+	<meta name="msapplication-TileImage" content="icon.png">
+	<meta name="msapplication-TileColor" content="#002e58">
+
+	<!--iOS info-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title content="Nymbus">
+	<link rel="apple-touch-icon" href="icon.png">
+	
+	<!--Android info-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Password Checker </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="manifest" href="manifest.json">
+    </head>
+   <body ng-app="pswdgen" ng-controller="generate">
+       <div class="top">
+            <nav>
+            <ul>
+            <li><img id="logo" src="icon1.png"/></li>
+            </ul>
+           </nav>
+       </div>
+       <div class="main">
+           <h1 class="title">Welcome to Nymbus!</h1>
+           <p>Nymbus is a cybersecurity app focused on improving the security practices of it's users. It includes useful tools and tips to help people learn how to keep themselves safe in the digital word.</p>
+           <p>We are currently in beta, and the app will be available soon!</p>
+       </div>
+   </body>
+   <script>
+    var app = angular.module('pswdgen', []);
+
+    app.controller('generate', function ($scope){
+        $scope.num = Math.floor((Math.random() * 99) + 1);
+        $scope.passphrase = "Passphrase Generator ";
+    });
+    </script>
+   </html>

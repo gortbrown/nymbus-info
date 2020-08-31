@@ -1,0 +1,53 @@
+<! DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <head>
+        <!--Windows info-->
+	<meta name="msapplication-TileImage" content="icon.png">
+	<meta name="msapplication-TileColor" content="#002e58">
+
+	<!--iOS info-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title content="Nymbus">
+	<link rel="apple-touch-icon" href="icon.png">
+	
+	<!--Android info-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Password Checker </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="manifest" href="manifest.json">
+    </head>
+   <body ng-app="pswdgen" ng-controller="generate">
+       <div class="top">
+            <nav>
+            <ul>
+            <li><img id="logo" src="icon1.png"/></li>
+            </ul>
+           </nav>
+       </div>
+       <div class="main">
+           <h1 class="title">Welcome Beta Testers!</h1>
+           <div id="spacer2"></div>
+           <h2 class="title">Thank you for your interest!</h2>
+           <p>I really appreciate your interest in beta testing my app! I created Nymbus to help people get better at protecting themselves when they're online. Seeing how many people have bad passwords and fall for scam emails was surprising, and it was even more surprising to see how easy it was to keep yourself secure online. That's why I decided to create an app that helped people learn how to improve their cybersecurity practices with easy to use tools, and easy to understand tips. I want this app to be the best it can be, and the easiest to use that it can be, which is why I'm doing this open beta test! I want to get this into the hands of people before it's official launch so I can find any problems, and make any improvements possible to make this the best it can be!
+            </p>
+            <div id="spacer2"></div>
+            <h2 class="title">How do I test the app?</h2>
+            <p>Getting started is easy! First off, you should join the beta tester's GroupMe chat, which will allow you to talk with me and other testers about any bugs you find or any improvements you think should be made. Next, you'll need to "install" the app. The reason I have quotations around the word install is because it's a special type of app. It's called a Progressive Web App, which is a fancy name for a website that you can add to your homescreen and use just like a normal app. I did this instead of a normal app on the app store to make it easier to develop, and to provide the same experience on all devices. To install the app, just got into your web browser, go to beta.nymbus.xyz, and add the website to your homescreen. Alternatively, you can just use it through your browser on your phone or your computer. Finally, just use the app! Test out the features, and if you notice anything weird, or think something could be better, or easier to use, then send your suggestion in the GroupMe. I've tested things out, and know all of the features work the way they're supposed to (unless there's anything I missed) so the main focus of this test is to make sure it's easy to use and easy to understand.
+            </p>
+            <div id="spacer2"></div>
+            <button class="group" type="button" onclick="window.open('https://groupme.com/join_group/61926110/QPgoTNKu')">Join the GroupMe!</button>
+            <img src="index.png"></img>
+       </div>
+   </body>
+   <script>
+    var app = angular.module('pswdgen', []);
+
+    app.controller('generate', function ($scope){
+        $scope.num = Math.floor((Math.random() * 99) + 1);
+        $scope.passphrase = "Passphrase Generator ";
+    });
+    </script>
+   </html>
